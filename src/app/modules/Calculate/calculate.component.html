@@ -1,0 +1,93 @@
+<div class="center-div">
+  <div>
+    <div class="flex padB20">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Select an product</mat-label>
+          <mat-select [(value)]="selectedProduct">
+            <mat-option *ngFor="let option of productList" [value]="option">
+              {{ option.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="col1">
+        <mat-slider
+          min="2000"
+          max="15000"
+          step="100"
+          discrete
+          [displayWith]="formatLabel"
+        >
+          <input matSliderThumb [value]="customer && customer.amountRequired" />
+        </mat-slider>
+      </div>
+    </div>
+    <div class="flex AmtContainer padB20">
+      <div>$2,000</div>
+      <div class="amtCenter">How much do you need?</div>
+      <div class="mright">$15,000</div>
+    </div>
+
+    <div class="flex">
+      <mat-form-field appearance="fill" fxFlex="100%" class="titleWidth padR20">
+        <mat-select [(value)]="customer && customer.title" placeholder="Title">
+          <mat-option value="Mr"> Mr. </mat-option>
+          <mat-option value="Mr."> Mrs. </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth padR20">
+        <input
+          matInput
+          [(ngModel)]="customer && customer.firstName"
+          placeholder="First Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth">
+        <input
+          matInput
+          [(ngModel)]="customer && customer.lastName"
+          placeholder="Last Name"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="flex">
+      <mat-form-field appearance="fill" class="inputWidthEmail padR20">
+        <input
+          matInput
+          [(ngModel)]="customer && customer.email"
+          placeholder="Your email"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth">
+        <input
+          matInput
+          [(ngModel)]="customer && customer.mobile"
+          placeholder="Mobile Number"
+        />
+      </mat-form-field>
+    </div>
+    <div class="flex padB20">
+      <button
+        mat-fab
+        extended
+        class="w100"
+        (click)="calculateHandler()"
+        class="custom-button"
+      >
+        Calculate quote
+      </button>
+    </div>
+
+    <div class="flex">
+      <div class="text-center">Qoute does not affect your credit score</div>
+    </div>
+  </div>
+</div>

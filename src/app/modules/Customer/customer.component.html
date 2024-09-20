@@ -1,0 +1,87 @@
+<div class="center-div">
+  <div>
+    <div>
+      <mat-form-field appearance="fill" fxFlex="100%" class="titleWidth padR20">
+        <mat-select [(value)]="customer.term" placeholder="Term">
+          <mat-option *ngFor="let number of numbersArray" [value]="number">{{
+            number
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field appearance="fill" fxFlex="100%" class="titleWidth padR20">
+        <mat-select [(value)]="customer.title" placeholder="Title">
+          <mat-option value="Mr"> Mr. </mat-option>
+          <mat-option value="Mr."> Mrs. </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth padR20">
+        <input
+          matInput
+          [(ngModel)]="customer.firstName"
+          placeholder="First Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth">
+        <input
+          matInput
+          [(ngModel)]="customer.lastName"
+          placeholder="Last Name"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="flex">
+      <mat-form-field class="inputWidthEmail padR20">
+        <mat-label>Date of Birth</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="customer.dateOfBirth"
+        />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth">
+        <input
+          matInput
+          [(ngModel)]="customer.amountRequired"
+          placeholder="Amount"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="flex">
+      <mat-form-field appearance="fill" class="inputWidthEmail padR20">
+        <input matInput [(ngModel)]="customer.email" placeholder="Your email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="inputWidth">
+        <input
+          matInput
+          [(ngModel)]="customer.mobile"
+          placeholder="Mobile Number"
+        />
+      </mat-form-field>
+    </div>
+    <div class="flex padB20">
+      <button
+        mat-fab
+        extended
+        class="w100"
+        (click)="addCustomer()"
+        class="custom-button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

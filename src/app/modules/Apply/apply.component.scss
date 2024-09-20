@@ -1,0 +1,111 @@
+table {
+  width: 100%;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  padding: 8px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+.col1 {
+  width: 30%;
+}
+.col2 {
+  width: 70%;
+}
+.w100 {
+  width: 100%;
+}
+
+mat-slider {
+  width: 500px;
+}
+
+.AmtContainer {
+  width: 500px;
+}
+
+.mright {
+  margin-left: auto;
+}
+
+.amtCenter {
+  padding-left: 130px;
+}
+
+.center-div {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.titleWidth {
+  width: 100px !important;
+}
+
+.padB20 {
+  padding-bottom: 20px;
+}
+
+.padB10 {
+  padding-bottom: 10px;
+}
+.padR20 {
+  padding-right: 20px;
+}
+
+.inputWidth {
+  width: 190px;
+}
+
+.inputWidthEmail {
+  width: 310px;
+}
+
+.w100 {
+  width: 500px;
+}
+
+.custom-button {
+  background-color: #4caf50 !important; /* Custom background color */
+  color: white; /* Custom text color */
+  font-size: 16px;
+  width: 100%;
+}
+
+.custom-button:hover {
+  background-color: #388e3c !important; /* Darker shade on hover */
+}
+
+.text-center {
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+}
+
+.tCenter {
+  text-align: center;
+}
+
+.fbold {
+  font-weight: 600;
+}
+
+.success-message {
+  color: green;
+
+  margin-top: 4px;
+}
+
+.error-message {
+  color: red !important;
+
+  margin-top: 4px;
+}
